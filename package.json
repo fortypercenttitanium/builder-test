@@ -1,18 +1,24 @@
 {
 	"name": "builder-test",
+	"appId": "BuilderTest",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Test app for electron builder",
 	"main": "main.js",
+	"publish": {
+		"provider": "github"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "electron ."
+		"start": "electron .",
+		"build": "electron-builder build --linux --publish never",
+		"deploy": "electron-builder build --linux --publish always"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/fortypercenttitanium/builder-test.git"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Alex Younger",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/fortypercenttitanium/builder-test/issues"
